@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
+
     @GetMapping("/test")
     public ResponseEntity<Test> test() {
         Test test = new Test("테스트");
@@ -15,7 +16,7 @@ public class TestController {
 
     @GetMapping("/protect")
     public ResponseEntity<Test> protect() {
-        Test test = new Test("보안되어 있는 API 요청");
+        Test test = new Test("보안되어있는 API 요청");
         return ResponseEntity.ok(test);
     }
 

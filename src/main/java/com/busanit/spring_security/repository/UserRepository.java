@@ -6,8 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    // 사용자 이름으로 User 를 찾는 쿼리 메소드
+    // 사용자이름으로 User를 찾는 쿼리 메서드
     User findByUsername(String username);
-
-
 }
