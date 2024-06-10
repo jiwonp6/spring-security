@@ -48,7 +48,7 @@ public class SecurityConfig {
                 // CSRF: 웹 보안 공격, 사용자가 요청할 때 인지 못한 상태에서 원하지 않는 액션을 수행하게 하는 공격
                 // CSRF 보호 비활성화 (REST API 요청으로 비활성화) <- CSRF 보호가 되어있는 웹에 접근하기 위해서는 CSRF 토큰이 필요하고 검증
                 .authorizeRequests(
-                        auth -> auth.requestMatchers("/test", "/register", "/auth", "/jwt/**").permitAll()
+                        auth -> auth.requestMatchers("/test", "/register", "/auth", "/jwt/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                                     // test, register, auth, jwt* 라는 요청에 대해서는 모두 허용
                                     .anyRequest().authenticated()
                                     // 모든 요청에 대해서 인증을 요구
